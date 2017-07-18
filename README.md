@@ -4,8 +4,18 @@ This compilation is intended to relay facts about Solidity in a somewhat compreh
 
 ## Security Best Practices
 
-- To prevent replay attacks wherebuy an attacker is able to repeatedly call a function beneficial to them, set the balance of their account to 0 or the reduced number _prior_ to sending them ether.
-  - 
+- To prevent replay attacks wherebuy an attacker is able to repeatedly call a function beneficial to them, set the balance of their account to 0 or the reduced number _prior_ to sending them ether
+        
+        
+        function withdrawRefund() external {
+          uint refund = refunds[msg.sender];
+          refunds[msg.sender] = 0; // <- user's balance set to 0 prior to sending to prevent being able to "replay" `.send()` on following line
+          if (!msg.sender.send(refund)) {
+            refunds[msg.sender] = refund; // reverting state because send failed
+          }
+        }
+        
+
 
 ## Math
 
