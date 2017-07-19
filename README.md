@@ -14,7 +14,14 @@ This compilation is intended to relay facts about Solidity in a somewhat compreh
             refunds[msg.sender] = refund; // reverting state because send failed
           }
         }
-        
+
+## Contract Constructor Functions
+
+- Constructor functions are functions that have the same name as the contract
+- Constructor functions are optional
+- Only one constructor function is allowed which means overloading is not supported
+
+
 ## General
 
  - If you use `var` you will get a compiler warning.  You shouldn't use `var`.  It will use the `uint8` type.  This will be disallowed in future versions of Solidity.
@@ -40,6 +47,7 @@ This compilation is intended to relay facts about Solidity in a somewhat compreh
 - [ ] If the contract is supposed to receive ether (and keep them) does my fallback function have the `payable` keyord?
 - [ ] If using a loop that is expected to possibly loop more than 255 times, have I declared the iterator variable in the loop as some integer type larger than `uint8`?
 - [ ] If I use integer divions am I using a multiplier to prevent Solidity from rounding down?
+- [ ] Is all data inside your contract whether at deploy time or after being called by any user intended to be public?
 
 
 ## Links + Sources
