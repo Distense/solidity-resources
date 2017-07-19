@@ -1,6 +1,8 @@
 # Solidity Resources
 
-This compilation is intended to relay facts about Solidity in a somewhat comprehensive manner, without providing much explanation.  It is intended to be a starting point for beginning Solidity developers and should contain many, but not all, important facts about Solidity.  Also, the language is rapidly changing, so please feel free to submit updates as PRs!
+This compilation is intended to relay facts about Solidity in a somewhat comprehensive manner, without providing much explanation.  This is a starting point and ongoing reference for Solidity developers and should contain many, but not all, important facts about Solidity.  A goal in compiling this has been to condense facts that can be taken away from documentation.  If a sentence in official documentation implies something but doesn't come out and specifically say something we have tried to condense those sentences into _actionable_ items here.  Many actionable items that are spelled out as such in the original source (for instance the "!Note" and "!Warning" [here](http://idorecall.com/blog/about/)) are not repeated here (though this file may repeat some of the more important items. Solidity as a language is rapidly changing, so please feel free to submit updates as PRs!
+
+
 
 ## Security Best Practices
 
