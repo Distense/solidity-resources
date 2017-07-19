@@ -1,12 +1,14 @@
 # Solidity Resources
 
-This compilation is intended to relay facts about Solidity in a somewhat comprehensive manner, without providing much explanation.  This is a starting point and ongoing reference for Solidity developers and should contain many, but not all, important facts about Solidity.  A goal in compiling this has been to condense facts that can be taken away from documentation.  If a sentence in official documentation implies something but doesn't come out and specifically say something we have tried to condense those sentences into _actionable_ items here.  Many actionable items that are spelled out as such in the original source (for instance the "!Note" and "!Warning" [here](http://idorecall.com/blog/about/)) are not repeated here (though this file may repeat some of the more important items. Solidity as a language is rapidly changing, so please feel free to submit updates as PRs!
+This compilation is intended to relay facts about Solidity in a somewhat comprehensive manner, without providing much explanation.  This is a starting point and ongoing reference for Solidity developers and should contain many, but not all, important facts about Solidity.  A goal in compiling this has been to condense facts that can be taken away from documentation.  If a sentence in official documentation implies something but doesn't come out and specifically say something we have tried to condense those sentences into _actionable_ items here.  Many actionable items that are spelled out as such in the original source (for instance the "!Note" and "!Warning" [here](http://idorecall.com/blog/about/)) are not repeated here though this file may repeat some of the more important items. 
+
+Solidity as a language is rapidly changing, so please feel free to submit updates as PRs!  Please link to the source, as that is the best way for us to verify facts and learn more.
 
 
 
 ## Security Best Practices
 
-- To prevent replay attacks wherebuy an attacker is able to repeatedly call a function beneficial to them, set the balance of their account to 0 or the reduced number _prior_ to sending them ether
+- To prevent replay attacks whereby an attacker is able to repeatedly call a function beneficial to them, set the balance of their account to 0 or the reduced number _prior_ to sending them ether
         
         
         function withdrawRefund() external {
