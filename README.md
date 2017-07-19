@@ -15,6 +15,9 @@ This compilation is intended to relay facts about Solidity in a somewhat compreh
           }
         }
         
+## General
+
+ - If you use `var` you will get a compiler warning.  You shouldn't use `var`.  It will use the `uint8` type.  This will be disallowed in future versions of Solidity.
 
 
 ## Math
@@ -37,7 +40,6 @@ This compilation is intended to relay facts about Solidity in a somewhat compreh
 - [ ] If the contract is supposed to receive ether (and keep them) does my fallback function have the `payable` keyord?
 - [ ] If using a loop that is expected to possibly loop more than 255 times, have I declared the iterator variable in the loop as some integer type larger than `uint8`?
 - [ ] If I use integer divions am I using a multiplier to prevent Solidity from rounding down?
-- [ ] 
 
 
 ## Links + Sources
