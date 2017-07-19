@@ -26,6 +26,12 @@ Solidity as a language is rapidly changing, so please feel free to submit update
 - Only one constructor function is allowed which means overloading is not supported
 
 
+## Modifiers
+
+- `internal` - infamous for the multi-sig wallet hack on 19/7/2017, this function modifier means that the function can only be called within the contract itself.
+- `payable` - functions must use this keyword to receive ether
+
+
 ## General
 
  - If you use `var` you will get a compiler warning.  You shouldn't use `var`.  It will use the `uint8` type.  This will be disallowed in future versions of Solidity.
