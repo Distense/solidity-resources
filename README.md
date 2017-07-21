@@ -21,7 +21,7 @@ Solidity as a language is rapidly changing, so please feel free to submit update
 
 ## Abstract Contracts
 
-- [Main DOCS](http://solidity.readthedocs.io/en/develop/contracts.html#abstract-contracts)
+- [Solidity Docs About Abstract Contracts](http://solidity.readthedocs.io/en/develop/contracts.html#abstract-contracts)
 - 
 
 
@@ -44,7 +44,7 @@ Solidity as a language is rapidly changing, so please feel free to submit update
 
 ## Interfaces
 
-- [Main Docs](http://solidity.readthedocs.io/en/develop/contracts.html#interfaces)
+- [Solidity Docs About Interfaces](http://solidity.readthedocs.io/en/develop/contracts.html#interfaces)
 
 ## Math
 
