@@ -19,6 +19,12 @@ Solidity as a language is rapidly changing, so please feel free to submit update
           }
         }
 
+## Abstract Contracts
+
+- [Main DOCS](http://solidity.readthedocs.io/en/develop/contracts.html#abstract-contracts)
+- 
+
+
 ## Contract Constructor Functions
 
 - Constructor functions are functions that have the same name as the contract
@@ -36,6 +42,9 @@ Solidity as a language is rapidly changing, so please feel free to submit update
 
  - If you use `var` you will get a compiler warning.  You shouldn't use `var`.  It will use the `uint8` type.  This will be disallowed in future versions of Solidity.
 
+## Interfaces
+
+- [Main Docs](http://solidity.readthedocs.io/en/develop/contracts.html#interfaces)
 
 ## Math
 
