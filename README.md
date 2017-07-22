@@ -31,6 +31,11 @@ Solidity as a language is rapidly changing, so please feel free to submit update
 - Constructor functions are optional
 - Only one constructor function is allowed which means overloading is not supported
 
+## DELEGATECALL
+
+- Call a function in second contract with the storage of the first
+- DELEGATECALL is a security risk for the sending contract which needs to trust that the receiving contract will treat the storage well ([link](https://ethereum.stackexchange.com/a/3672/3344))
+- Enables contracts to be used by multiple users
 
 ## Modifiers
 
