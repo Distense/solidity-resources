@@ -36,12 +36,12 @@ Solidity as a language is rapidly changing, so please feel free to submit update
 - Call a function in second contract with the storage of the first
 - DELEGATECALL is a security risk for the sending contract which needs to trust that the receiving contract will treat the storage well ([link](https://ethereum.stackexchange.com/a/3672/3344))
 - Enables contracts to be used by multiple users
+- Any storage writes inside the `DELEGATECALL` will be made to the storage of the client, not the storage of the library. ([link](http://hackingdistributed.com/2017/07/22/deep-dive-parity-bug/))
 
 ## Modifiers
 
 - `internal` - infamous for the multi-sig wallet hack on 19/7/2017, this function modifier means that the function can only be called within the contract itself.
 - `payable` - functions must use this keyword to receive ether
-
 
 ## General
 
