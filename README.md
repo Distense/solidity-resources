@@ -21,10 +21,12 @@ Solidity as a language is rapidly changing, so please feel free to submit update
 
 ## Abstract Contracts
 
-- [Solidity Docs About Abstract Contracts](http://solidity.readthedocs.io/en/develop/contracts.html#abstract-contracts)
-- 
-
-
+- The [Solidity Docs About Abstract Contracts](http://solidity.readthedocs.io/en/develop/contracts.html#abstract-contracts) are unfortuntely quite sparse! The docs only state what abstract contracts can do, not what their purpose is or the benfits of abstract contracts. 
+- Benefits of Abstract Contracts [GitHub Issue](https://github.com/ethereum/solidity/issues/627)
+  - Providing a place to define a contract interface, which is useful for self-documentation as well as extensibility.([link](https://github.com/ethereum/solidity/issues/627#issuecomment-237847668))
+  - Giving us the ability to implement most of a contract, but leave some methods abstract, facilitating patterns like     template method and more generally removing code duplication. ([link](https://github.com/ethereum/solidity/issues/627#issuecomment-237847668))
+- Additional info requested about abstract contracts!  PRs welcome.
+  
 ## Contract Constructor Functions
 
 - Constructor functions are functions that have the same name as the contract
@@ -65,7 +67,6 @@ Solidity as a language is rapidly changing, so please feel free to submit update
 - Fallback functions receive a gas stipend of 2300 gas which greatly limits what they can do ([link](http://solidity.readthedocs.io/en/latest/contracts.html#fallback-function))
 - A fallback function is a default function that a contract is able to call to respond to data that doesn’t match any function ([link](http://hackingdistributed.com/2017/07/22/deep-dive-parity-bug/))
 
-
 ## Solidity Contract Checklist
 
 - [ ] Do I reset the senders balance before sending them to prevent DAO-type attacks? 
@@ -74,10 +75,8 @@ Solidity as a language is rapidly changing, so please feel free to submit update
 - [ ] If I use integer divions am I using a multiplier to prevent Solidity from rounding down?
 - [ ] Is all data inside your contract whether at deploy time or after being called by any user intended to be public?
 
-
 ## Links + Sources
 
-[Ethereum Builder Gitbook](https://www.gitbook.com/book/ethereumbuilders/guide/details)
-
-
+- [Ethereum Builder Gitbook](https://www.gitbook.com/book/ethereumbuilders/guide/details)
+- [Great Article about the Multi-Sig Hack](http://hackingdistributed.com/2017/07/22/deep-dive-parity-bug/)                      
 
