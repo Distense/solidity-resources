@@ -63,6 +63,7 @@ Solidity as a language is rapidly changing, so please feel free to submit update
 - If you want to send ether to a contract it must contain a `payable` fallback function or else the contract will throw an exception
   - `"Sending Ether to this contract will cause an exception, because the fallback function does not have the "payable"`([link](http://solidity.readthedocs.io/en/develop/contracts.html#fallback-function))
 - Fallback functions receive a gas stipend of 2300 gas which greatly limits what they can do ([link](http://solidity.readthedocs.io/en/latest/contracts.html#fallback-function))
+- A fallback function is a default function that a contract is able to call to respond to data that doesn’t match any function ([link](http://hackingdistributed.com/2017/07/22/deep-dive-parity-bug/))
 
 
 ## Solidity Contract Checklist
