@@ -76,5 +76,7 @@ Solidity as a language is rapidly changing, so please feel free to submit update
 
 ## Links + Sources
 
+[Ethereum Builder Gitbook](https://www.gitbook.com/book/ethereumbuilders/guide/details)
+
 
 
