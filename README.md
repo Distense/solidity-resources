@@ -45,10 +45,13 @@ Solidity as a language is rapidly changing, so please feel free to submit update
 - `internal` - infamous for the multi-sig wallet hack on 19/7/2017, this function modifier means that the function can only be called within the contract itself.
 - `payable` - functions must use this keyword to receive ether
 
-## General
+## General/Gotchas
 
  - If you use `var` you will get a compiler warning.  You shouldn't use `var`.  It will use the `uint8` type.  This will be disallowed in future versions of Solidity.
  - Using a contract method call, e.g. `ContractName.someFunction()` instead of `address.call()` or other low level external call methods will cause the original calling function to throw instead of returning false ([link](https://github.com/ConsenSys/smart-contract-best-practices#handle-errors-in-external-calls))
+ - You will get the `Accessors for mapping with dynamically-sized keys not yet implemented.` compiler error if you use public mappings: `mapping(string => address) public usedContracts;`
+ - The `Abort(5)` compiler error is probably a missing semi-colon; it can also be to other general Solidity syntax errors, including the use of a [reserved keyword](http://solidity.readthedocs.io/en/develop/miscellaneous.html#reserved-keywords)
+ - The `external` keyword will make a function *only* callable by an outside contract
 
 ## Interfaces
 
