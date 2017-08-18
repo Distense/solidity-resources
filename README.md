@@ -19,14 +19,32 @@ Solidity as a language is rapidly changing, so please feel free to submit update
           }
         }
 
+## Difference between contract and user addresses 
+
+There are two types of accounts in Ethereum
+ - Externally Owned Accounts (EOAs)
+ - Contracts Accounts
+
+An externally controlled account:
+
+- has an ether balance,
+- can send transactions (ether transfer or trigger contract code),
+- is controlled by private keys,
+- has no associated code.
+- Contract accounts
+
+A contract:
+
+- has an ether balance,
+- has associated code,
+- code execution is triggered by transactions or messages (calls) received from other contracts.
+- when executed - perform operations of arbitrary complexity (Turing completeness) - manipulate its own persistent storage, i.e., can have its own permanent state - can call other contracts
+
 ## Abstract Contracts
 
-- The [Solidity Docs About Abstract Contracts](http://solidity.readthedocs.io/en/develop/contracts.html#abstract-contracts) are unfortuntely quite sparse! The docs only state what abstract contracts can do, not what their purpose is or the benfits of abstract contracts. 
-- Benefits of Abstract Contracts [GitHub Issue](https://github.com/ethereum/solidity/issues/627)
-  - Providing a place to define a contract interface, which is useful for self-documentation as well as extensibility.([link](https://github.com/ethereum/solidity/issues/627#issuecomment-237847668))
-  - Giving us the ability to implement most of a contract, but leave some methods abstract, facilitating patterns like     template method and more generally removing code duplication. ([link](https://github.com/ethereum/solidity/issues/627#issuecomment-237847668))
-- Additional info requested about abstract contracts!  PRs welcome.
-  
+- [Solidity Docs About Abstract Contracts](http://solidity.readthedocs.io/en/develop/contracts.html#abstract-contracts)
+
+
 ## Contract Constructor Functions
 
 - Constructor functions are functions that have the same name as the contract
@@ -45,13 +63,9 @@ Solidity as a language is rapidly changing, so please feel free to submit update
 - `internal` - infamous for the multi-sig wallet hack on 19/7/2017, this function modifier means that the function can only be called within the contract itself.
 - `payable` - functions must use this keyword to receive ether
 
-## General/Gotchas
+## General
 
  - If you use `var` you will get a compiler warning.  You shouldn't use `var`.  It will use the `uint8` type.  This will be disallowed in future versions of Solidity.
- - Using a contract method call, e.g. `ContractName.someFunction()` instead of `address.call()` or other low level external call methods will cause the original calling function to throw instead of returning false ([link](https://github.com/ConsenSys/smart-contract-best-practices#handle-errors-in-external-calls))
- - You will get the `Accessors for mapping with dynamically-sized keys not yet implemented.` compiler error if you use public mappings: `mapping(string => address) public usedContracts;`
- - The `Abort(5)` compiler error is probably a missing semi-colon; it can also be to other general Solidity syntax errors, including the use of a [reserved keyword](http://solidity.readthedocs.io/en/develop/miscellaneous.html#reserved-keywords)
- - The `external` keyword will make a function *only* callable by an outside contract
 
 ## Interfaces
 
@@ -69,7 +83,7 @@ Solidity as a language is rapidly changing, so please feel free to submit update
 - If you want to send ether to a contract it must contain a `payable` fallback function or else the contract will throw an exception
   - `"Sending Ether to this contract will cause an exception, because the fallback function does not have the "payable"`([link](http://solidity.readthedocs.io/en/develop/contracts.html#fallback-function))
 - Fallback functions receive a gas stipend of 2300 gas which greatly limits what they can do ([link](http://solidity.readthedocs.io/en/latest/contracts.html#fallback-function))
-- A fallback function is a default function that a contract is able to call to respond to data that doesn’t match any function ([link](http://hackingdistributed.com/2017/07/22/deep-dive-parity-bug/))
+
 
 ## Solidity Contract Checklist
 
@@ -79,8 +93,10 @@ Solidity as a language is rapidly changing, so please feel free to submit update
 - [ ] If I use integer divions am I using a multiplier to prevent Solidity from rounding down?
 - [ ] Is all data inside your contract whether at deploy time or after being called by any user intended to be public?
 
+
 ## Links + Sources
 
-- [Ethereum Builder Gitbook](https://www.gitbook.com/book/ethereumbuilders/guide/details)
-- [Great Article about the Multi-Sig Hack](http://hackingdistributed.com/2017/07/22/deep-dive-parity-bug/)                      
+[Ethereum Builder Gitbook](https://www.gitbook.com/book/ethereumbuilders/guide/details)
+
+
 
