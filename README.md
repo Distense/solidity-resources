@@ -75,6 +75,9 @@ A contract:
 
 - Integer division rounds down, so avoid it until the fixed-point type is implemented or use a multiplier ([link](https://github.com/ConsenSys/smart-contract-best-practices#beware-rounding-with-integer-division))
 
+## Type Issues
+
+- The error `Accessors for mapping with dynamically-sized keys not yet implemented.` is thrown when you use a variable-sized `key` for a mapping that is **public**.  Merely removing the `public` keyword will fix this error.  You can use events or querying by index as workarounds.  
 
 ## Fallback functions
 
