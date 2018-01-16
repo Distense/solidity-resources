@@ -96,6 +96,11 @@ A contract:
 - [ ] If I use integer divions am I using a multiplier to prevent Solidity from rounding down?
 - [ ] Is all data inside your contract whether at deploy time or after being called by any user intended to be public?
 
+## Solidity + web3 Development Gotchas
+
+- Start `testrpc` with a block gas limit of the current value, but no higher, because that wouldn't be a realistic environment for deploying and testing: `testrpc -l 8000000`.  The 'l' is for `limit`/
+- If you run in to problems, a good tip is to `rm -r build` your build folder
+- `.call` is only for getting return values.  You cannot changes the state of the blockchain when using `.call()`.
 
 ## Links + Sources
 
